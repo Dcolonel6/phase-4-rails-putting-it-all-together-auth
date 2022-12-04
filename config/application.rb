@@ -44,5 +44,10 @@ module Phase4RailsPuttingItAllTogetherAuth
     # Middleware like session, flash, cookies can be added back manually.
     # Skip views, helpers and assets when generating a new resource.
     config.api_only = true
+    config.generators do |generate|
+      generate.assets false # create assets when generating a scaffold
+      generate.helper false # generate helpers
+      generate.stylesheets false # generate stylesheets
+    end
   end
 end
